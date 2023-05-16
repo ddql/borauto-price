@@ -4,7 +4,7 @@
 include "db.php";                                                               // подключаем бд
 $delete = "DELETE FROM car_list ";                                              // удаляем все строки
 mysqli_query($connectionDB, $delete) or die(mysqli_error($link));   
-$xml = simplexml_load_file('xml/test0.xml');                                    // загружаем хмл файл
+$xml = simplexml_load_file('price1.xml');                                    // загружаем хмл файл
 
 foreach ($xml->cars->car as $car)                                               // построчно импортируем в бд
 {
