@@ -1,186 +1,120 @@
 <data>
 	<cars>
 		<car>
-			<category>Легковой</category>
-			<Code_DS>ЦБ00000011</Code_DS>
-			<Name_DS>ДЦ Ростов</Name_DS>
-			<extra_options>
-				<option>00098</option>
-				<option>00108</option>
-				<option>00088</option>
-			</extra_options>
-			<Type_feed>Used</Type_feed>
-			<Sva_fio>Петров Иван Иваныч</Sva_fio>
-			<sva_code>000214</sva_code>
-			<type_purchase>Выкуп</type_purchase>
-			<Stock_days>
-				<dc_days>124</dc_days>
-				<parking_days>15</parking_days>
-			</Stock_days>
-			<manager_comment>Дисконт!!!
-1. Комплектация FORD FUSION 1.6 классический автомат
-2. ПТС: 6 владельцев 3. Гарантия: нет
-4. Пробег:259.км. 
-5. Кол.ключей:1
-6. Особенности:
-7. Ремонт кузов:автомобиль красился полностью местами присутствует шпатлёвка
-8. Ремонт техника:в целом не плохо ,заводиться едет коробка листает,присутствуют возрастные косячки по подвеске,имеются ошибки,остальное смотреть в диагностике!!!</manager_comment>
-			<Planned_Profit>142200,45</Planned_Profit>
-			<car_order_manager>
-				<car_order_manager_code>0000414</car_order_manager_code>
-				<car_order_manager_fio>Иванов Иван Иваныч</car_order_manager_fio>
-			</car_order_manager>
-			<diag_results>
-				<diag_result>Диагностика: 1 результат</diag_result>
-				<diag_result>Диагностика: 2 результат</diag_result>
-			</diag_results>
-			<dop_price>12345</dop_price>
-			<PPP_ready>Да</PPP_ready>
-			<Has_pts>Да</Has_pts>
-			<Autoinspect_ID>90353</Autoinspect_ID>
-			<def_ved>
-				<def_ved_item title="сверка VIN">Совпадает</def_ved_item>  
-				<def_ved_item title="Тормозные колодки">Норма</def_ved_item>  
-			</def_ved>
-			<autoteka_url>https://autoteka.ru/vin/example</autoteka_url>
-			<mark_id>RENAULT</mark_id>
-			<folder_id>LOGAN, I Рестайлинг</folder_id>
-			<modification_id>1.6 MT (84 л.с.)</modification_id>
-			<body_type>Седан</body_type>
-			<drive>Передний </drive>
-			<transmission>Вариатор</transmission>
-			<engine_volume>1598</engine_volume>
-			<engine_power>87</engine_power>
-			<engine_type>Бензин</engine_type>
-			<date_admission>2023-03-13</date_admission>
-			<Owners>2</Owners>
-			<wheel>Левый</wheel>
-			<color_hex>#cccccc</color_hex>
-			<color>Серый</color>
-			<availability>В наличии</availability>
-			<custom>Растаможен</custom>
-			<state>Отличное</state>
-			<pts />
-			<year>2019</year>
-			<run>67746</run>
-			<price>629900</price>
-			<credit_discount>20000</credit_discount>
-			<tradein_discount>20000</tradein_discount>
-			<insurance_discount>0</insurance_discount>
-			<dealer_discount>0</dealer_discount>
-			<currency>RUR</currency>
-			<registry_year>2019</registry_year>
-			<vin>X7LLSRAHH7H124115</vin>
-			<car_order_exists>NO</car_order_exists>
-            <description>
-            большое описание
-            </description>
-			<extras>ABS,AUX,Подогрев передних сидений,Подушка безопасности водителя,Количество мест: 5,Электропривод зеркал,Кондиционер,Электростеклоподъемники: Передние,Материал салона: Ткань</extras>
-			<unique_id />
-			<images />
-			<video />
-			<action>show</action>
-			<nds>0</nds>
-			<sites>
-				<auto_ru />
-				<avito_ru />
-				<drom_ru />
-			</sites>
-			<poi_id />
-			<ContactPhone />
-			<optional_equipment>0</optional_equipment>
-			<advantage />
-			<vehiclemodification />
-			<localvehiclemodelcode />
-			<localvehiclemodeldescription />
-			<uploading_type>0</uploading_type>
+			<dc_name>ДЦ СКС-Лада_АМ_склад бу ам</dc_name>			<!-- Наименование склада ДЦ, где находится авто  -->
+			<vin>SJNFCAE11U1291832</vin>
+			<mark_id>Nissan</mark_id>
+			<folder_id>Note, I</folder_id>
+			<modification_id>1.6 AT (110 л.с.)</modification_id>
+			<body_type>Хэтчбек 5 дв.</body_type>
+			<transmission>Автоматическая КП</transmission>
+			<owners>2</owners>
+			<color>Красный</color>
+			<year>2008</year>
+			<run>181820</run>
+			<price>549000</price>
+			<recommended_price></recommended_price>				<!-- РРЦ (для новых) -->
+			<purchase_price>549000</purchase_price>				<!-- Сумма закупки -->
+			<optional_equipment_price></optional_equipment_price>		<!-- Сумма доп оборудования (для новых)  -->
+			<license_plate>Х599СА31</license_plate>				<!-- Гос.Номер автомобиля (для асп) -->
+			<comment>Окрасы, плюсы и минусы</comment>			<!-- Комментарий менеджера  -->
+			<manager>Стрелков Михаил Михайлович</manager>			<!-- ФИО специалиста, выкупившего авто (для асп) -->
+			<stock_days>1</stock_days>					<!-- Количество дней на складе  -->
+			<purchase_type>Агентский договор</purchase_type>		<!-- Вид поступления (для асп) -->
+			<expenses_repair></expenses_repair>				<!-- Сумма расходов на ремонт (для асп) -->
+			<expenses_resources></expenses_resources>			<!-- Сумма расходов на оборотку (для асп) -->
+			<last_price_change>1</last_price_change>			<!-- Количество дней с переоценки (для асп) -->
+			<autoteka_url>https://autoteka.ru/report/web/uuid/6cbd4077-6ffd-4754-98d2-14377647236e</autoteka_url>
+			<car_order_manager>Елисеев Иван Алексеевич</car_order_manager>	<!-- Заказ на автомобиль.Менеджер (если есть) -->
+			<vehiclemodification></vehiclemodification>			<!-- Вариант комплектации (для новых) -->
+			<extras></extras>						<!-- Базовые опции (для новых) -->
 		</car>
 		<car>
-			<category>Легковой</category>
-			<Code_DS>ЦБ00000022</Code_DS>
-			<Name_DS>ДЦ Ростов</Name_DS>
-			<extra_options>
-				<option>00098</option>
-				<option>00108</option>
-				<option>00088</option>
-			</extra_options>
-			<Type_feed>Used</Type_feed>
-			<Sva_fio>Петров Иван Иваныч</Sva_fio>
-			<sva_code>000214</sva_code>
-			<type_purchase>Выкуп</type_purchase>
-			<Stock_days>
-				<dc_days>124</dc_days>
-				<parking_days>15</parking_days>
-			</Stock_days>
-			<manager_comment>Хлам, впарить в первую очередь</manager_comment>
-			<Planned_Profit>142200,45</Planned_Profit>
-			<car_order_manager>
-				<car_order_manager_code>0000414</car_order_manager_code>
-				<car_order_manager_fio>Иванов Иван Иваныч</car_order_manager_fio>
-			</car_order_manager>
-			<diag_results>
-				<diag_result>Диагностика: 1 результат</diag_result>
-				<diag_result>Диагностика: 2 результат</diag_result>
-			</diag_results>
-			<dop_price>12345</dop_price>
-			<PPP_ready>Да</PPP_ready>
-			<Has_pts>Да</Has_pts>
-			<Autoinspect_ID>90353</Autoinspect_ID>
-			<def_ved>
-				<def_ved_item title="сверка VIN">Совпадает</def_ved_item>  
-				<def_ved_item title="Тормозные колодки">Норма</def_ved_item>  
-			</def_ved>
-			<autoteka_url>https://autoteka.ru/vin/example</autoteka_url>
+			<dc_name>ДЦ СКС-Лада_АМ_склад новые ам</dc_name>			<!-- Наименование склада ДЦ, где находится авто  -->
+			<vin>XTA219040P0938083</vin>
 			<mark_id>LADA (ВАЗ)</mark_id>
 			<folder_id>Granta, I Рестайлинг</folder_id>
-			<modification_id>1.6 MT (87 л.с.)</modification_id>
-			<body_type>Лифтбек</body_type>
-			<drive>Передний </drive>
+			<modification_id>Euro-2 1.6 MT (90 л.с.)</modification_id>
+			<body_type>Седан</body_type>
 			<transmission>Механическая КП</transmission>
-			<engine_volume>1598</engine_volume>
-			<engine_power>87</engine_power>
-			<engine_type>Бензин</engine_type>
-			<date_admission>2023-03-13</date_admission>
-			<Owners>2</Owners>
-			<wheel>Левый</wheel>
-			<color_hex>#cccccc</color_hex>
-			<color>Серый</color>
-			<availability>В наличии</availability>
-			<custom>Растаможен</custom>
-			<state>Отличное</state>
-			<pts />
-			<year>2019</year>
-			<run>67746</run>
-			<price>629900</price>
-			<credit_discount>20000</credit_discount>
-			<tradein_discount>20000</tradein_discount>
-			<insurance_discount>0</insurance_discount>
-			<dealer_discount>0</dealer_discount>
-			<currency>RUR</currency>
-			<registry_year>2019</registry_year>
-			<vin>XTA219110K0316572</vin>
-			<car_order_exists>YES</car_order_exists>
-			<description> LADA GRANTA БОЛЬШОЕ ОПИСАНИЕ 
-            </description>
-			<extras>ABS,AUX,Подогрев передних сидений,Подушка безопасности водителя,Количество мест: 5,Электропривод зеркал,Кондиционер,Электростеклоподъемники: Передние,Материал салона: Ткань</extras>
-			<unique_id />
-			<images />
-			<video />
-			<action>show</action>
-			<nds>0</nds>
-			<sites>
-				<auto_ru />
-				<avito_ru />
-				<drom_ru />
-			</sites>
-			<poi_id />
-			<ContactPhone />
-			<optional_equipment>0</optional_equipment>
-			<advantage />
-			<vehiclemodification />
-			<localvehiclemodelcode />
-			<localvehiclemodeldescription />
-			<uploading_type>0</uploading_type>
+			<owners>0</owners>
+			<color>Черный</color>
+			<year>2023</year>
+			<run>0</run>
+			<price>836500</price>
+			<recommended_price>836500</recommended_price>			<!-- РРЦ (для новых) -->
+			<purchase_price>786310</purchase_price>				<!-- Сумма закупки -->
+			<optional_equipment_price>69238</optional_equipment_price>	<!-- Сумма доп оборудования (для новых)  -->
+			<license_plate></license_plate>					<!-- Гос.Номер автомобиля  -->
+			<comment>аморт кап,защита карт,накладки на пороги итд</comment>	<!-- Комментарий менеджера  -->
+			<manager></manager>						<!-- ФИО специалиста, выкупившего АСП  -->
+			<stock_days>18</stock_days>					<!-- Количество дней на складе  -->
+			<purchase_type></purchase_type>					<!-- Вид поступления (для асп)  -->
+			<expenses_repair></expenses_repair>				<!-- Сумма расходов на ремонт (для асп)  -->
+			<expenses_resources></expenses_resources>			<!-- Сумма расходов на оборотку (для асп) -->
+			<last_price_change></last_price_change>				<!-- Количество дней с переоценки (для асп) -->
+			<autoteka_url></autoteka_url>					<!-- Ссылка на автотеку (для асп) -->
+			<car_order_manager>Елисеев Иван Алексеевич</car_order_manager>	<!-- Заказ на автомобиль.Менеджер (если есть) -->
+			<vehiclemodification>1.6 5MT COMFORT 22 (21-F5N)</vehiclemodification><!-- Вариант комплектации (для новых) -->
+			<extras>Glonass, Без ЦЗ, Легкосплавные диски</extras>		<!-- Базовые опции (для новых) -->
+		</car>
+		<car>
+			<dc_name>ДЦ СКС-Лада_АМ_склад новые ам</dc_name>			<!-- Наименование склада ДЦ, где находится авто  -->
+			<vin>XTA219040P0938013</vin>
+			<mark_id>LADA (ВАЗ)</mark_id>
+			<folder_id>Granta, I Рестайлинг</folder_id>
+			<modification_id>Euro-2 1.6 MT (90 л.с.)</modification_id>
+			<body_type>Седан</body_type>
+			<transmission>Механическая КП</transmission>
+			<owners>0</owners>
+			<color>Черный</color>
+			<year>2023</year>
+			<run>0</run>
+			<price>536500</price>
+			<recommended_price>836500</recommended_price>			<!-- РРЦ (для новых) -->
+			<purchase_price>786310</purchase_price>				<!-- Сумма закупки -->
+			<optional_equipment_price>69238</optional_equipment_price>	<!-- Сумма доп оборудования (для новых)  -->
+			<license_plate></license_plate>					<!-- Гос.Номер автомобиля  -->
+			<comment>аморт кап,защита карт,накладки на пороги итд</comment>	<!-- Комментарий менеджера  -->
+			<manager></manager>						<!-- ФИО специалиста, выкупившего АСП  -->
+			<stock_days>18</stock_days>					<!-- Количество дней на складе  -->
+			<purchase_type></purchase_type>					<!-- Вид поступления (для асп)  -->
+			<expenses_repair></expenses_repair>				<!-- Сумма расходов на ремонт (для асп)  -->
+			<expenses_resources></expenses_resources>			<!-- Сумма расходов на оборотку (для асп) -->
+			<last_price_change></last_price_change>				<!-- Количество дней с переоценки (для асп) -->
+			<autoteka_url></autoteka_url>					<!-- Ссылка на автотеку (для асп) -->
+			<car_order_manager></car_order_manager>	<!-- Заказ на автомобиль.Менеджер (если есть) -->
+			<vehiclemodification>1.6 5MT COMFORT 22 (21-F5N)</vehiclemodification><!-- Вариант комплектации (для новых) -->
+			<extras>Glonass, Без ЦЗ, Легкосплавные диски</extras>		<!-- Базовые опции (для новых) -->
+		</car>
+		<car>
+			<dc_name>ДЦ СКС-Лада_АМ_склад новые ам</dc_name>			<!-- Наименование ДЦ, где находится авто  -->
+			<vin>XTA219040P0938063</vin>
+			<mark_id>LADA (ВАЗ)</mark_id>
+			<folder_id>Granta, I Рестайлинг</folder_id>
+			<modification_id>Euro-2 1.6 MT (90 л.с.)</modification_id>
+			<body_type>Седан</body_type>
+			<transmission>Механическая КП</transmission>
+			<owners>0</owners>
+			<color>Черный</color>
+			<year>2023</year>
+			<run>0</run>
+			<price>636500</price>
+			<recommended_price>836500</recommended_price>			<!-- РРЦ (для новых) -->
+			<purchase_price>786310</purchase_price>				<!-- Сумма закупки -->
+			<optional_equipment_price>69238</optional_equipment_price>	<!-- Сумма доп оборудования (для новых)  -->
+			<license_plate></license_plate>					<!-- Гос.Номер автомобиля  -->
+			<comment>аморт кап,защита карт,накладки на пороги итд</comment>	<!-- Комментарий менеджера  -->
+			<manager></manager>						<!-- ФИО специалиста, выкупившего АСП  -->
+			<stock_days>18</stock_days>					<!-- Количество дней на складе  -->
+			<purchase_type></purchase_type>					<!-- Вид поступления (для асп)  -->
+			<expenses_repair></expenses_repair>				<!-- Сумма расходов на ремонт (для асп)  -->
+			<expenses_resources></expenses_resources>			<!-- Сумма расходов на оборотку (для асп) -->
+			<last_price_change></last_price_change>				<!-- Количество дней с переоценки (для асп) -->
+			<autoteka_url></autoteka_url>					<!-- Ссылка на автотеку (для асп) -->
+			<car_order_manager></car_order_manager>	<!-- Заказ на автомобиль.Менеджер (если есть) -->
+			<vehiclemodification>1.6 5MT COMFORT 22 (21-F5N)</vehiclemodification><!-- Вариант комплектации (для новых) -->
+			<extras>Glonass, Без ЦЗ, Легкосплавные диски</extras>		<!-- Базовые опции (для новых) -->
 		</car>
 		
     </cars>
