@@ -28,36 +28,47 @@
                 include "db.php";
                 $vincode =  htmlspecialchars($_GET["vin"]);
                 if ($vincode){
-                $comment_sql = "SELECT * FROM car WHERE vin LIKE '%$vincode%'";
+                $comment_sql = "SELECT * FROM car_list WHERE vin LIKE '%$vincode%'";
                 $ExecQuery = mysqli_query($connectionDB, $comment_sql);
                 while ($Result = mysqli_fetch_array($ExecQuery)) {
-                    if ($Result['car_order_exists']=='YES'){
-                        echo "<h1>Авто в предоплате</h1>";
-                    }?>
+                    if ($Result['car_order_manager']) echo "<h1>Авто в предоплате у ".$Result['car_order_manager']."</h1>";?>
                     <b>Авто:  </b>
                     <br><?php echo $Result['mark_id']." ".$Result['folder_id'];?>
                     <br><b>VIN:  </b>
-                    <br><?php echo $Result['vin']; ?> (<a  target="_blank" href="https://xn--90adear.xn--p1ai/check/auto#<?php echo $Result['vin'];?>">гибдд</a>, <a target="_blank" href="<?php echo $Result['autoteka_url'];?>">автотека</a>)
-                    <br><b>Актуальная стоимость:  </b>
+                    <br><?php echo $Result['vin']; ?> (<a  target="_blank" href="https://xn--90adear.xn--p1ai/check/auto#<?php echo $Result['vin'];?>">гибдд</a>, 
+                        <a target="_blank" href="<?php if($Result['autoteka_url']) echo $Result['autoteka_url']; else echo 'https://autoteka.ru/report_by_vin/'.$Result['vin'];?>">автотека</a>)
+                    <br><b>Цена продажи:  </b>
                     <br><?php echo $Result['price'];?>
+                    <?php if ($Result['recommended_price']) echo"<br><b>РРЦ:  </b><br>".$Result['recommended_price'];?>
+                    <?php if ($Result['optional_equipment_price']) echo"<br><b>Сумма ДОП:  </b><br>".$Result['optional_equipment_price'];?>
+                    <br><b>Модификация:  </b>
+                    <br><?php echo $Result['modification_id'];?>
+                    <br><b>Кузов:  </b>
+                    <br><?php echo $Result['body_type'];?>
                     <br><b>Цвет:  </b>
                     <br><?php echo $Result['color'];?>
                     <br><b>Год:  </b>
                     <br><?php echo $Result['year'];?>
                     <br><b>Владельцев в ПТС:</b>
-                    <br><?php echo $Result['Owners'];?>
+                    <br><?php echo $Result['owners'];?>
                     <br><b>Пробег:</b>
                     <br><?php echo $Result['run'];?>
                     <br><b>Комментарий:</b>
-                    <br><?php  echo "<pre>".$Result['manager_comment']."</pre>" ?>
-                    <b>СВА:  </b>
-                    <br><?php echo $Result['Sva_fio'];?>
+                    <br><?php  echo "<pre>".$Result['comment']."</pre>" ?>
+                    <?php if ($Result['vehiclemodification']) echo"<b>Вариант комплектации:  </b><br>".$Result['vehiclemodification'];?>
+                    <?php if ($Result['extras']) echo"<br><b>Базовые опции:  </b><br>".$Result['extras'];?>
+                    <?php if ($Result['manager']) echo"<b>СВА:  </b><br>".$Result['manager'];?>
                     <br><b>Количество дней на складе:</b>
-                    <br><?php echo json_decode($Result['Stock_days'])->{'parking_days'};?>
-                    <br><b>Вид поступления:  </b>
-                    <br><?php echo $Result['type_purchase'];?> 
-                    <br><b>Планируемая прибыль:  </b>
-                    <br><?php echo $Result['Planned_Profit'];?> 
+                    <br><?php echo  $Result['stock_days'];?>
+                    <br><b>Сумма закупки:</b>
+                    <br><?php echo  $Result['purchase_price'];?>
+                    <?php if ($Result['purchase_type']) echo"<br><b>Вид поступления:  </b><br>".$Result['purchase_type'];?>
+                    <?php if ($Result['expenses_repair']) echo"<br><b>Факт. расходы на ремонт:  </b><br>".$Result['expenses_repair'];?>
+                    <?php if ($Result['expenses_resources']) echo"<br><b>Процент за ресурсы:  </b><br>".$Result['expenses_resources'];?>
+                    <?php if ($Result['last_price_change']) echo"<br><b>Дней с переоценки:  </b><br>".$Result['last_price_change'];?>
+                    <?php if ($Result['expenses_repair'] ) echo"<br><b>Итого расходы:  </b><br>".$Result['expenses_repair']+$Result['expenses_resources'];?>
+                    <?php if ($Result['expenses_repair'] ) echo"<br><b>Планируемая прибыль:  </b><br>".$Result['price']-$Result['purchase_price']-$Result['expenses_repair']-$Result['expenses_resources'];?>
+
                     
                     <br><br><button onclick="javascript:history.back(); return false;" type="button" class="btn btn-light">Назад</button><br>
                     <?php }
