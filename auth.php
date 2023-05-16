@@ -29,15 +29,25 @@ if(isset($_POST['submitLogin']))
         <label class="form-label">Дилерский центр</label>
         <select name="inputDC" class="form-select" required>
             <option selected disabled value="">Выбор ДЦ</option>
-            <!--  Список ДЦ, параметр value совпадает с кодом подразделения в БД !-->
-            <option value="ЦБ00000011">Бск АСП</option>
-            <option value="ЦБ00000011">СКС-Лада АСП</option>
-            <option value="ЦБ00000011">Остужева АСП</option>
-            <option value="ЦБ00000011">9 января АСП</option>
-            <option value="ЦБ00000022">Тамбов АСП</option>
-            <option value="ЦБ00000022">Липецк АСП</option>
-            <option value="ЦБ00000022">Ставрополь АСП</option>
-            <option value="ЦБ00000022">Ростов АСП</option>
+            <!--  Список складов !-->
+            <option>ДЦ 9 января_АМ_склад бу ам</option>
+            <option>ДЦ 9 января_АМ_склад новые ам</option>
+            <option>ДЦ Бк_АМ_склад бу ам</option>
+            <option>ДЦ Бк_АМ_склад новые ам</option>
+            <option>ДЦ Липецк_АМ_склад бу ам</option>
+            <option>ДЦ Липецк_АМ_склад новые ам</option>
+            <option>ДЦ Остужева_АМ_склад бу ам</option>
+            <option>ДЦ Остужева_АМ_склад новые ам</option>
+            <option>ДЦ Ростов_АМ_склад бу ам</option>
+            <option>ДЦ Ростов_АМ_склад новые ам</option>
+            <option>ДЦ СКС-Лада_АМ_склад бу ам</option>
+            <option>ДЦ СКС-Лада_АМ_склад новые ам</option>
+            <option>ДЦ Ставрополь_АМ_склад бу ам</option>
+            <option>ДЦ Ставрополь_АМ_склад новые ам Лада1</option>
+            <option>ДЦ Ставрополь_АМ_склад новые ам УАЗ</option>
+            <option>ДЦ Тамбов_АМ_склад бу ам</option>
+            <option>ДЦ Тамбов_АМ_склад новые ам</option>
+            
         </select>
         <br> 
         <button name="submitLogin" type="submit" type='button' class='btn btn-light'>Войти</button>
