@@ -9,4 +9,6 @@
 - logout.php - скрипт выхода из системы;
 - nav.php - навигация по сайту;
 - script.js - AJAX скрипт поиска;
-- search.php - форма поиска.
+- search.php - форма поиск;
+- car_list (1).sql - пример таблицы в бд;
+- price1.xml - пример фида.
