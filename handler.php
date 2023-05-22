@@ -1,12 +1,12 @@
 <?php 
-// "живой поиск". идет проверка по коду ДЦ, названию автомобиля, цене, пробегу и комментарию менеджера
+// "живой поиск". идет проверка по наименованию склада, названию автомобиля, цене, пробегу и комментарию менеджера
 include "db.php";               //подключение бд
 $Name = $_POST['search'];       //получаем значение из строки поиска
-$Dc = $_COOKIE['dc'];           //получаем код ДЦ
+$Dc_name = $_COOKIE['dc'];      //получаем склад из куки
 $Query = "
-SELECT * FROM car WHERE Code_DS LIKE '%$Dc%' AND 
+SELECT * FROM car_list WHERE dc_name LIKE '%$Dc_name%' AND 
 ((vin LIKE '%$Name%')
-OR (manager_comment LIKE '%$Name%') 
+OR (comment LIKE '%$Name%') 
 OR (mark_id LIKE '%$Name%') 
 OR (folder_id LIKE '%$Name%') 
 OR (run LIKE '%$Name%') 
