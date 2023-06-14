@@ -3,8 +3,14 @@
 include "db.php";               //подключение бд
 $Name = $_POST['search'];       //получаем значение из строки поиска
 $Dc_name = $_COOKIE['dc'];      //получаем склад из куки
+$Dc_array = explode(',',$Dc_name);
+foreach ($Dc_array as &$value) { 
+    $value = "'".$value."'"; 
+} 
+unset($value); 
+$Dc_query = implode(" OR dc_name LIKE ", $Dc_array);
 $Query = "
-SELECT * FROM car_list WHERE dc_name LIKE '%$Dc_name%' AND 
+SELECT * FROM car_list WHERE dc_name LIKE ". $Dc_query." AND 
 ((vin LIKE '%$Name%')
 OR (comment LIKE '%$Name%') 
 OR (mark_id LIKE '%$Name%') 
