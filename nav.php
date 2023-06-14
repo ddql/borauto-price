@@ -21,7 +21,7 @@
                 <li class="nav-item">
                     <?php 
                     if(isset($_POST['submitDC']) AND isset($_POST['inputDC'])){   
-                        setcookie("dc", $_POST['inputDC'], time()+60*60*24*30, "/");   
+                        setcookie("dc", implode(',',$_POST['inputDC']), time()+60*60*24*30, "/");   
                         setcookie("login", $_COOKIE['login'], time()+60*60*24*30, "/");   
                         header('Location: /'); exit;
                     }
@@ -29,18 +29,27 @@
                     ?>
                    <form method="POST">
                         <div class="d-grid gap-3">
-                            <select name="inputDC" class="form-select">
-                                <option selected disabled value="">Выбор ДЦ</option>
-                                <option value="ЦБ00000011">Бск АСП</option>
-                                <option value="ЦБ00000011">СКС-Лада АСП</option>
-                                <option value="ЦБ00000011">Остужева АСП</option>
-                                <option value="ЦБ00000011">9 января АСП</option>
-                                <option value="ЦБ00000022">Тамбов АСП</option>
-                                <option value="ЦБ00000022">Липецк АСП</option>
-                                <option value="ЦБ00000022">Ставрополь АСП</option>
-                                <option value="ЦБ00000022">Ростов АСП</option>
-                            </select>
-                            <button name="submitDC" type="submit" type='button' class='btn btn-light'>Установить ДЦ</button>
+                              <select name="inputDC[]" class="form-select" multiple="multiple">
+                                <option>ДЦ 9 января_АМ_склад бу ам</option>
+                                <option>ДЦ 9 января_АМ_склад новые ам</option>
+                                <option>ДЦ Бк_АМ_склад бу ам</option>
+                                <option>ДЦ Бк_АМ_склад новые ам</option>
+                                <option>ДЦ Липецк_АМ_склад бу ам</option>
+                                <option>ДЦ Липецк_АМ_склад новые ам</option>
+                                <option>ДЦ Остужева_АМ_склад бу ам</option>
+                                <option>ДЦ Остужева_АМ_склад новые ам</option>
+                                <option>ДЦ Ростов_АМ_склад бу ам</option>
+                                <option>ДЦ Ростов_АМ_склад новые ам</option>
+                                <option>ДЦ СКС-Лада_АМ_склад бу ам</option>
+                                <option>ДЦ СКС-Лада_АМ_склад новые ам</option>
+                                <option>ДЦ Ставрополь_АМ_склад бу ам</option>
+                                <option>ДЦ Ставрополь_АМ_склад новые ам Лада1</option>
+                                <option>ДЦ Ставрополь_АМ_склад новые ам УАЗ</option>
+                                <option>ДЦ Тамбов_АМ_склад бу ам</option>
+                                <option>ДЦ Тамбов_АМ_склад новые ам</option>
+                                <option>ДЦ Аксай_АМ_склад бу ам</option>
+                              </select>
+                            <button name="submitDC" type="submit" type='button' class='btn btn-light'>Установить склад</button>
                         </div>
                     </form>
                 
