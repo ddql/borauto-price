@@ -10,7 +10,7 @@ foreach ($Dc_array as &$value) {
 unset($value); 
 $Dc_query = implode(" OR dc_name LIKE ", $Dc_array);
 $Query = "
-SELECT * FROM car_list WHERE dc_name LIKE ". $Dc_query." AND 
+SELECT * FROM car_list WHERE (dc_name LIKE ". $Dc_query.") AND 
 ((vin LIKE '%$Name%')
 OR (comment LIKE '%$Name%') 
 OR (mark_id LIKE '%$Name%') 
@@ -44,7 +44,9 @@ $ExecQuery = mysqli_query($connectionDB, $Query);?>
                 </a>
         </div> 
 
-        <span class="badge bg-primary rounded fs-6" ><?php echo $Result['price']; ?></span>
+        <span class="badge bg-primary rounded fs-6" ><?php echo $Result['price']; ?>
+             <?php if ($Result['purchase_type']=="Агентский договор") echo '<span class="badge text-bg-danger rounded-pill position-absolute top-100 start-50 translate-middle mt-1">Комиссия</span>';?>                                           
+        </span>
     </li>
 <?php 
 }?>
