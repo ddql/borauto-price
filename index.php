@@ -19,8 +19,8 @@
             если нет - выводим авторизацию 
 !-->
                 <?php 
-                if (isset($_COOKIE['login'])){
-                    include "search.php";?>
+                if (isset($_COOKIE['login'])){?>
+                    <input value="<?php if (isset($_COOKIE['search'])) echo $_COOKIE['search']; ?>" class="form-control form-control-lg" name="search" id="search"  type="text" placeholder="Поиск по vin, названию, цене и т.д." aria-label=".form-control-lg example">
                     <div id="display" style="margin-top: 10px"></div><?php
                 }
                 else
